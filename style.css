@@ -1,0 +1,71 @@
+/* simple reset, project-wide font and color settings*/
+:root {
+  --color-primary-1: rgb(235, 47, 100);
+  --color-primary-2: rgb(255, 20, 147);
+  --color-background: rgb(0, 0, 0);
+  --color-text: rgb(255, 255, 255);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+
+  /* font-family: 
+  font-size: 
+  font-weight: 
+  line-height:  */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*////////////////////////////////*/
+/*CONTAINER*/
+.container {
+  flex: 0 0 80%;
+  height: 80%;
+
+  display: flex;
+}
+
+/*////////////////////////////////*/
+/*PHOTO*/
+.photo {
+  flex: 0 0 40%;
+  background-color: blueviolet;
+  background-image: url(img/img-medium.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*////////////////////////////////*/
+/*FORMS*/
+.form {
+  background-color: black;
+  flex: 1;
+}
+
+/*////////////////////////////////*/
+/*FORM TEXT*/
+
+/*////////////////////////////////*/
+/*SIGN-UP FORM*/
+
+/*////////////////////////////////*/
+/*LOG-IN FORM*/
+
+/*////////////////////////////////*/
+/*FORM BUTTONS*/
