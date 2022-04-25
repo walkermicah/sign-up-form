@@ -1,9 +1,8 @@
 /* simple reset, project-wide font and color settings*/
 :root {
-  --color-primary-1: rgb(235, 47, 100);
-  --color-primary-2: rgb(255, 20, 147);
-  --color-background: rgb(0, 0, 0);
-  --color-text: rgb(255, 255, 255);
+  --color-background: rgb(206, 4, 112);
+  --color-primary: rgb(0, 0, 0);
+  --color-accent: rgb(255, 255, 255);
 }
 
 *,
@@ -22,10 +21,8 @@ body {
   box-sizing: border-box;
   height: 100vh;
 
-  /* font-family: 
-  font-size: 
-  font-weight: 
-  line-height:  */
+  font-family: "Raleway", sans-serif;
+  font-size: 1.75rem;
 
   display: flex;
   align-items: center;
@@ -45,7 +42,6 @@ body {
 /*PHOTO*/
 .photo {
   flex: 0 0 40%;
-  background-color: blueviolet;
   background-image: url(img/img-medium.jpg);
   background-size: cover;
   background-position: center;
@@ -54,12 +50,19 @@ body {
 /*////////////////////////////////*/
 /*FORMS*/
 .form {
-  background-color: black;
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  padding: 2rem;
   flex: 1;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
 }
 
-/*////////////////////////////////*/
-/*FORM TEXT*/
+.hidden {
+  display: none;
+}
 
 /*////////////////////////////////*/
 /*SIGN-UP FORM*/
@@ -67,5 +70,114 @@ body {
 /*////////////////////////////////*/
 /*LOG-IN FORM*/
 
+.form__password-options {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  font-size: 1.5rem;
+}
+
 /*////////////////////////////////*/
-/*FORM BUTTONS*/
+/*FORM TEXT*/
+.form__heading {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.form__instructions {
+  font-weight: 400;
+}
+
+.form__link-text {
+  font-size: 1.5rem;
+  font-weight: 300;
+  align-self: center;
+  margin-top: auto;
+}
+
+/*////////////////////////////////*/
+/*FORM LINKS*/
+
+.form__link:link,
+.form__link:visited {
+  color: var(--color-accent);
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.form__link:hover,
+.form_link:active {
+  font-weight: 700;
+  transform: scale(1.05);
+}
+
+/*////////////////////////////////*/
+/*SUBMIT BUTTON*/
+
+.form__button {
+  font: inherit;
+  font-weight: 700;
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  width: 20rem;
+  height: 4rem;
+  cursor: pointer;
+}
+
+.form__button-text {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.form__button:hover .form__button-text,
+.form__button:active .form__button-text {
+  transform: scale(1.1);
+}
+
+/*////////////////////////////////*/
+/*CHECKBOX BUTTON*/
+
+.form__checkbox-input {
+  display: none;
+}
+
+.form__checkbox-label {
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.form__checkbox-button {
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 2.5px solid rgb(0, 0, 0);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+}
+
+.form__checkbox-button::after {
+  content: "";
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.form__checkbox-input:checked
+  + .form__checkbox-label
+  .form__checkbox-button::after {
+  opacity: 1;
+}
