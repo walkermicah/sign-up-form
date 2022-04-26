@@ -167,6 +167,11 @@ body {
   transform: scale(1.05);
 }
 
+.form__link:focus {
+  outline: none;
+  border-bottom: 1px solid white;
+}
+
 .link__password {
   align-self: flex-end;
   padding: 1.5rem 0 0.5rem 0;
@@ -176,8 +181,8 @@ body {
 /*SUBMIT BUTTON*/
 
 .form__button {
-  font: inherit;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 200;
   border: none;
   background-color: var(--color-primary);
   color: var(--color-accent);
@@ -192,6 +197,10 @@ body {
   transition: transform 0.2s;
 }
 
+.form__button:focus {
+  outline: 2px solid white;
+}
+
 .form__button:hover .form__button-text,
 .form__button:active .form__button-text {
   transform: scale(1.1);
@@ -200,8 +209,16 @@ body {
 /*////////////////////////////////*/
 /*CHECKBOX BUTTON*/
 
+.form__checkbox {
+  position: relative;
+}
+
 .form__checkbox-input {
-  display: none;
+  display: inline-block;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .form__checkbox-label {
@@ -211,6 +228,10 @@ body {
   padding-left: 3.5rem;
   display: flex;
   align-items: center;
+}
+
+.form__checkbox-label:focus {
+  outline: 1px solid black;
 }
 
 .form__checkbox-button {
@@ -239,4 +260,8 @@ body {
   + .form__checkbox-label
   .form__checkbox-button::after {
   opacity: 1;
+}
+
+.form__checkbox-input:focus + .form__checkbox-label {
+  font-weight: 700;
 }
