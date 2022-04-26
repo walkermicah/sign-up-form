@@ -10,31 +10,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <div class="container">
       <div class="photo"></div>
-      <form action="" method="get" class="form form__sign-up">
+      <form action="#" method="get" class="form form__sign-up">
         <h1 class="form__heading">Nice to meet you.</h1>
         <p class="form__instructions">Create an account to get started.</p>
 
         <div class="form__field-box">
           <div class="form__field">
-            <label for="username" class="form__label">Username</label>
+            <label for="username-new" class="form__label">Username</label>
             <input
               type="text"
-              id="username"
-              name="username"
+              id="username-new"
+              name="username-new"
               class="form__input"
+              required
             />
           </div>
 
           <div class="form__field">
             <label for="email" class="form__label">Email</label>
-            <input type="email" id="email" name="email" class="form__input" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form__input"
+              required
+            />
           </div>
 
           <div class="form__field">
@@ -44,22 +51,30 @@
               id="first_name"
               name="first_name"
               class="form__input"
+              required
             />
           </div>
 
           <div class="form__field">
-            <label for="tel" class="form__label">Last name</label>
+            <label for="last_name" class="form__label">Last name</label>
             <input
               type="text"
               id="last_name"
               name="last_name"
               class="form__input"
+              required
             />
           </div>
 
           <div class="form__field">
-            <label for="pwd" class="form__label">Password</label>
-            <input type="password" id="pwd" name="pwd" class="form__input" />
+            <label for="pwd-new" class="form__label">Password</label>
+            <input
+              type="password"
+              id="pwd-new"
+              name="pwd-new"
+              class="form__input"
+              required
+            />
           </div>
 
           <div class="form__field">
@@ -69,6 +84,7 @@
               id="pwd-check"
               name="pwd-check"
               class="form__input"
+              required
             />
           </div>
         </div>
@@ -79,6 +95,7 @@
             class="form__checkbox-input"
             id="terms"
             name="terms"
+            required
           />
           <label for="terms" class="form__checkbox-label">
             <span class="form__checkbox-button"></span>
@@ -98,24 +115,31 @@
         </p>
       </form>
 
-      <form action="" method="get" class="form form__log-in hidden">
+      <form action="#" method="get" class="form form__log-in hidden">
         <h1 class="form__heading">Welcome back.</h1>
         <p class="form__instructions">Enter your login details to continue.</p>
 
         <div class="form__field-box">
           <div class="form__field">
-            <label for="first_name" class="form__label">Username</label>
+            <label for="username" class="form__label">Username</label>
             <input
               type="text"
-              id="first_name"
-              name="first_name"
+              id="username"
+              name="username"
               class="form__input"
+              required
             />
           </div>
 
           <div class="form__field">
             <label for="pwd" class="form__label">Password</label>
-            <input type="password" id="pwd" name="pwd" class="form__input" />
+            <input
+              type="password"
+              id="pwd"
+              name="pwd"
+              class="form__input"
+              required
+            />
           </div>
         </div>
 
