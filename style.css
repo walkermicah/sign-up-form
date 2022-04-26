@@ -22,7 +22,8 @@ body {
   height: 100vh;
 
   font-family: "Raleway", sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
+  font-weight: 300;
 
   display: flex;
   align-items: center;
@@ -52,10 +53,8 @@ body {
 .form {
   background-color: var(--color-background);
   color: var(--color-primary);
-  padding: 2rem;
   flex: 1;
   height: 100%;
-
   display: flex;
   flex-direction: column;
 }
@@ -64,17 +63,74 @@ body {
   display: none;
 }
 
+.form__field-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form__label {
+  text-transform: lowercase;
+}
+
+.form__input {
+  padding: 1rem 2.5rem;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.form__input:focus {
+  outline: 3px solid black;
+}
+
 /*////////////////////////////////*/
 /*SIGN-UP FORM*/
+/* form-specific layout */
+
+.form__sign-up {
+  gap: 1.5rem;
+  padding: 7rem 7rem 2rem 7rem;
+}
+
+.form__sign-up .form__field-box {
+  flex: 1;
+  align-content: space-evenly;
+  gap: 1rem;
+}
+
+.form__sign-up .form__field {
+  width: 45%;
+}
 
 /*////////////////////////////////*/
 /*LOG-IN FORM*/
+/* form-specific layout */
 
-.form__password-options {
-  display: flex;
-  align-items: center;
-  gap: 10rem;
-  font-size: 1.5rem;
+.form__log-in {
+  padding: 10rem 10rem 2rem 10rem;
+}
+
+.form__log-in .form__field-box {
+  align-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form__log-in .form__field {
+  width: 60%;
+}
+
+.form__log-in .form__button {
+  margin-top: 4rem;
+}
+
+.form__log-in .form__instructions {
+  margin-bottom: 4rem;
 }
 
 /*////////////////////////////////*/
@@ -85,14 +141,12 @@ body {
 }
 
 .form__instructions {
+  font-size: 1.75rem;
   font-weight: 400;
 }
 
 .form__link-text {
-  font-size: 1.5rem;
-  font-weight: 300;
-  align-self: center;
-  margin-top: auto;
+  align-self: flex-end;
 }
 
 /*////////////////////////////////*/
@@ -102,7 +156,6 @@ body {
 .form__link:visited {
   color: var(--color-accent);
   text-decoration: none;
-  position: relative;
   display: inline-block;
   transition: transform 0.2s;
   cursor: pointer;
@@ -112,6 +165,11 @@ body {
 .form_link:active {
   font-weight: 700;
   transform: scale(1.05);
+}
+
+.link__password {
+  align-self: flex-end;
+  padding: 1.5rem 0 0.5rem 0;
 }
 
 /*////////////////////////////////*/
@@ -126,6 +184,7 @@ body {
   width: 20rem;
   height: 4rem;
   cursor: pointer;
+  align-self: flex-end;
 }
 
 .form__button-text {
